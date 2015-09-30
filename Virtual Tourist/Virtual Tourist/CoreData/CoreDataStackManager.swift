@@ -78,11 +78,11 @@ class CoreDataStackManager {
             error = error1
             coordinator = nil
             // Report any error we got.
-            let dict = NSMutableDictionary()
+            var dict = [String: AnyObject]()
             dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
             dict[NSLocalizedFailureReasonErrorKey] = "There was an error creating or loading the application's saved data."
             dict[NSUnderlyingErrorKey] = error
-            error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict as [NSObject : AnyObject])
+            error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict as [String: AnyObject])
             
             // Left in for development development.
             NSLog("Unresolved error \(error), \(error!.userInfo)")

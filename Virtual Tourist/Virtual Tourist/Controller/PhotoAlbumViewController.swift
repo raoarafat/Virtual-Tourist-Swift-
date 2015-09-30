@@ -304,7 +304,7 @@ class PhotoAlbumViewController: UIViewController, MKMapViewDelegate,NSFetchedRes
     
     // The second method may be called multiple times, once for each Color object that is added, deleted, or changed.
     // We store the incex paths into the three arrays.
-    func controller(controller: NSFetchedResultsController, didChangeObject anObject: NSManagedObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
         
         switch type{
             
