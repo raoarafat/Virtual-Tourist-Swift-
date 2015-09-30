@@ -15,7 +15,6 @@ extension VTClient{
     let randomPage = Int(arc4random_uniform(UInt32(50))) + 1
     
     /* 1. Specify parameters, method (if has {key}), and HTTP body (if POST) */
-    var mutableMethod : String = VTClient.Methods.AuthenticationSessionNew
     
     let methodArguments = [
         VTClient.ParameterKeys.Method: VTClient.Flickr.METHOD_NAME,
@@ -33,8 +32,6 @@ extension VTClient{
     /* 2. Make the request */
     
     let task = taskforgGetImageFromFlickrByLatLong(methodArguments, completionHandler: { JSONResult, error in
-
-   // let task = taskForPOSTCommonLoginMethod(mutableMethod, body: jsonBody!) { JSONResult, error in
         
         /* 3. Send the desired value(s) to completion handler */
         if let error = error {

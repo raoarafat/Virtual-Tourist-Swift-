@@ -52,7 +52,7 @@ extension TravelLocationsMapViewController : MKMapViewDelegate {
         }
     }
     
-    func mapView(mapView: MKMapView,viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView!
+    func mapView(mapView: MKMapView,viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?
     {
         // 1
         if let student = annotation as? MKPointAnnotation {
